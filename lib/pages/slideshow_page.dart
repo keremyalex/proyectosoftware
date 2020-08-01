@@ -9,9 +9,47 @@ class SlideShowPage extends StatelessWidget {
       body: Column(
         children: <Widget>[
           Expanded(child: MiSlideShow()),
+          Row(
+            children: <Widget>[
+              Expanded(child: Registro()),
+              Expanded(child: IniciarSesion())
+            ],
+          ),
         ],
       ),
     );
+  }
+}
+
+class Registro extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        padding: EdgeInsets.only(left: 20),
+        height: 60,
+        child: Container(
+          alignment: Alignment.centerLeft,
+          child: RaisedButton(
+            onPressed: () {},
+            child: Text('Registro'),
+          ),
+        ));
+  }
+}
+
+class IniciarSesion extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        padding: EdgeInsets.only(right: 20),
+        height: 60,
+        child: Container(
+          alignment: Alignment.centerRight,
+          child: RaisedButton(
+            onPressed: () {},
+            child: Text('Iniciar Sesión'),
+          ),
+        ));
   }
 }
 
