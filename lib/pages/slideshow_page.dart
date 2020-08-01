@@ -16,10 +16,6 @@ class SlideShowPage extends StatelessWidget {
 }
 
 class MiSlideShow extends StatelessWidget {
-  const MiSlideShow({
-    Key key,
-  }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return SlideShow(
