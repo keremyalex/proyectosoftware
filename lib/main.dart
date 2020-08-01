@@ -3,7 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:proyectosoftware/pages/slideshow_page.dart';
 
 void main() {
-  debugPaintSizeEnabled = false;
+  debugPaintSizeEnabled = true;
   runApp(MyApp());
 }
 
