@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:proyectosoftware/pages/chat_page.dart';
 import 'package:proyectosoftware/pages/inicio_page.dart';
+import 'package:proyectosoftware/pages/principal_page.dart';
 import 'package:proyectosoftware/pages/slideshow_page.dart';
 
 void main() {
-  debugPaintSizeEnabled = false;
+  debugPaintSizeEnabled = true;
   runApp(MyApp());
 }
 
@@ -14,10 +16,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Gimnasio Software',
-      initialRoute: 'InicioPage',
+      initialRoute: 'ChatPage',
       routes: {
         'SlideShowPage': (context) => SlideShowPage(),
         'InicioPage': (context) => InicioPage(),
+        'PrincipalPage': (context) => PrincipalPage(),
+        'ChatPage': (context) => ChatPage(),
       },
     );
   }

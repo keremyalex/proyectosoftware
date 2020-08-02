@@ -6,6 +6,7 @@ class SlideShowPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.lightGreen,
       body: Column(
         children: <Widget>[
           Expanded(child: MiSlideShow()),
@@ -46,7 +47,9 @@ class IniciarSesion extends StatelessWidget {
         child: Container(
           alignment: Alignment.centerRight,
           child: RaisedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, 'InicioPage');
+            },
             child: Text('Iniciar Sesión'),
           ),
         ));

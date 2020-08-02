@@ -10,33 +10,35 @@ class _InicioPageState extends State<InicioPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.amberAccent,
-      body: SafeArea(
-        child: Column(
-          children: <Widget>[
-            Logo(),
-            Container(
-              padding: EdgeInsets.only(top: 15, bottom: 15),
-              child: Text(
-                'Ingreso',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Column(
+            children: <Widget>[
+              Logo(),
+              Container(
+                padding: EdgeInsets.only(top: 15, bottom: 15),
+                child: Text(
+                  'Ingreso',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
               ),
-            ),
-            Container(
-              child: Column(
-                children: <Widget>[
-                  Email(),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  Password(),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  BotonLogin(),
-                ],
+              Container(
+                child: Column(
+                  children: <Widget>[
+                    Email(),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Password(),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    BotonLogin(),
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
@@ -56,7 +58,9 @@ class BotonLogin extends StatelessWidget {
             'Login',
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
-          onPressed: () {}),
+          onPressed: () {
+            Navigator.pushNamed(context, 'PrincipalPage');
+          }),
     );
   }
 }
