@@ -6,7 +6,7 @@ class SlideShowPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightGreen,
+      backgroundColor: Color.fromRGBO(71, 175, 143, 0.8),
       body: Column(
         children: <Widget>[
           Expanded(child: MiSlideShow()),
